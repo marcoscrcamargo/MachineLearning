@@ -1,6 +1,6 @@
 # Machine Learning
 ## Introdução
-Este respositório foi usado para estudo da disciplina **SCC0276 - Machine Learning** ministrada pelo professor [Rodrigo Mello](http://conteudo.icmc.usp.br/pessoas/mello/), que possui um canal no youtube, [ML4U](https://www.youtube.com/channel/UCMSGXqLEE1q5NqG3hjA5vCg), sobre que também foi usado para reforçar o estudo. Os conjuntos de dados utilizados para teste estão disponíveis no [Dataset da UCI](https://archive.ics.uci.edu/ml/datasets.html).
+Este respositório foi usado para estudo da disciplina **SCC0276 - Machine Learning** ministrada pelo professor [Rodrigo Mello](http://conteudo.icmc.usp.br/pessoas/mello/), que possui um canal no youtube, [ML4U](https://www.youtube.com/channel/UCMSGXqLEE1q5NqG3hjA5vCg), sobre Machine Learning que também foi usado para reforçar o estudo. Os conjuntos de dados utilizados para teste estão disponíveis no [Dataset da UCI](https://archive.ics.uci.edu/ml/datasets.html).
 
 ## Aprendizado supervisionado e não-supervisionado
 O aprendizado de um programa é definido se a partir de um conjunto de**experiências E** com respeito a alguma **classe de tarefas T** e **medida de desempenho P**, o desempenho de tarefas em T, medido por P, melhora com as experiências E.
@@ -22,11 +22,12 @@ O _**overfitting**_ é quando o modelo classifica o conjunto de treino muito bem
 O conjunto de treinamento deve ser bem balanceado, ou seja, conter um volume aproximadamente similar de diferentes instâncias que desejamos classificar para alcançar boa generalização.
 
 ## Viés
+## Teoria do aprendizado estatistico
 
 ## Classificação e Regressão
 
 ## K-Nearest Neighbors
-O código exemplo do [KNN](https://github.com/marcoscrcamargo/MachineLearning/blob/master/KNN.ipynb).
+O K-Nearest Neighbors (KNN) funciona calculando a distância dos K vizinhos mais próximos. Quando um novo ponto de _query_ é enviado para o classificador, são calculadas as distâncias da _query_ para todos os pontos do _dataset_. O código exemplo do [KNN](https://github.com/marcoscrcamargo/MachineLearning/blob/master/KNN.ipynb).
 
 ## K-Means
 
