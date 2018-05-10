@@ -35,6 +35,7 @@ O viés de um classificador **f** é o conjunto de funções que ele consegue re
 Baseado em [Statistical Learning Theory: Models, Concepts and results - von Luxburg and Scholkopf](https://pdfs.semanticscholar.org/5ce6/0fa851f1f9acb16472d48294661eb9275ef5.pdf)
 
 ## Classificação e Regressão
+Um problema de classificação é quando você busca encontrar uma classe em um conjunto de valores discretos, por exemplo, identificar o objeto em uma imagem, ou dado as medidas de uma planta encontrar qual a sua especie. Já na regressão, o objetivo é encontrar um valor no espaço continuo obtendo a aproximação de uma função, por exemplo, estimar os preços do mercado imobiliário.
 
 ## K-Nearest Neighbors
 O K-Nearest Neighbors (KNN) funciona calculando a distância dos K vizinhos mais próximos. Quando um novo ponto de _query_ é enviado para o classificador, são calculadas as distâncias da _query_ para todos os pontos do _dataset_. O código exemplo do [KNN](https://github.com/marcoscrcamargo/MachineLearning/blob/master/KNN.ipynb).
