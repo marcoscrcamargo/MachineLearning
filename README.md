@@ -21,17 +21,28 @@ O _**overfitting**_ é quando o modelo classifica o conjunto de treino muito bem
 
 O conjunto de treinamento deve ser bem balanceado, ou seja, conter um volume aproximadamente similar de diferentes instâncias que desejamos classificar para alcançar boa generalização.
 
-## Viés
-## Teoria do aprendizado estatistico
+## Conceitos básicos da teoria do aprendizado estatistico
+O aprendizado é reduzido a econtrar a função **f: X -> Y** que relaciona as entradas (X) com as saídas (Y), o mapeamento f é chamado de *classificador*, e o *algoritmo de classificação* é o procedimento que faz o treinamento do classificador **f**.
+O risco é intuitivamente quantos elementos do espaço **X** foram errados pelo classificador **f**, geralmente é calculado pela soma dos erros quadrados, uma função **f** é dita melhor claassificador que **g** se **R(f) < R(g)** e o melhor classificador é aquele com o menor valor **R(f)** possível. O risco calculado a partir do número de erros de um classificador é chamado *risco empirico* ou *erro de treinamento*.
+
+![Image of Remp](img/Remp.png)
+
+
+O viés de um classificador **f** é o conjunto de funções que ele consegue representar, dado o conjunto de todas funções existentes.
+
+coeficiente de shattering
+
+teorema que diz quando que o risco empírico converge para o risco real
 
 ## Classificação e Regressão
 
 ## K-Nearest Neighbors
 O K-Nearest Neighbors (KNN) funciona calculando a distância dos K vizinhos mais próximos. Quando um novo ponto de _query_ é enviado para o classificador, são calculadas as distâncias da _query_ para todos os pontos do _dataset_. O código exemplo do [KNN](https://github.com/marcoscrcamargo/MachineLearning/blob/master/KNN.ipynb).
 
-## K-Means
 
 ## Distance-Weighted Nearest Neighbors
+
+## K-Means
 
 ## Perceptron
 
