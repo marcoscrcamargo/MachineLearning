@@ -29,7 +29,8 @@ O risco é intuitivamente quantos elementos do espaço **X** foram errados pelo 
 
 O viés de um classificador **f** é o conjunto de funções que ele consegue representar, dado o conjunto de todas funções existentes.
 
-![Image of BigNumbers](img/Remp.png)
+(Explicar Melhor)
+![Image of BigNumbers](img/BigNumbers.png)
 
 Baseado em [Statistical Learning Theory: Models, Concepts and results - von Luxburg and Scholkopf](https://pdfs.semanticscholar.org/5ce6/0fa851f1f9acb16472d48294661eb9275ef5.pdf)
 
