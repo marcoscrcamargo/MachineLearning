@@ -49,13 +49,13 @@ O Distance-Weighted Nearest Neighbors (D-WNN) é uma versão adaptada do KNN uti
 ## K-Means
 O K-means é um algoritmo de aprendizado não-supervisionado utilizado para o agrupamento de dados.
 O algoritmo funciona da seguinte maneira:
+* São iniciciados K centroides de maneira aleatória em pontos do conjunto de dados.
 * Enquanto E > threshold (limitante de erro)
-	1. São iniciciados K centroides de maneira aleatória em pontos do conjunto de dados.
-	2. Para cada centroide K são associados ao centroide K os pontos mais próximosa ele.
-	3. Então é atribuido ao centroide K um novo centro calculado a partir das médias dos pontos mais próximos.
-	4. Calcula-se o erro E como a soma das distâncias de cada centroide aos pontos que a ele pertencem.
+	1. Para cada centroide K são associados ao centroide K os pontos mais próximosa ele.
+	2. Então é atribuido ao centroide K um novo centro calculado a partir das médias dos pontos mais próximos.
+	3. Calcula-se o erro E como a variação nas distâncias dos centróides.
 
-* No final, se tem a posição dos K centroides.
+* No final, se tem a posição dos K centroides e os pontos associados a cada um.
 
 ## Perceptron
 
