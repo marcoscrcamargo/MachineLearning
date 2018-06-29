@@ -62,3 +62,72 @@ O algoritmo funciona da seguinte maneira:
 ## Multilayer Perceptron
 
 ## Aprendizado Bayesiano
+
+## Algoritmos Evolutivos e Genéticos
+É utilizado o fitness como medida de avaliação para cada candidato da população (por padrão, quanto maior o fitness melhor)
+
+A mutação é feita por uma pequena probabilidade do gene de um individuo da população se alterar.
+
+Crossover
+
+### Steady State
+É gerado um filho por meio da mutação de um pai selecionado aleatóriamente, e então é realizado um novo sorteio em toda a população para competir com o filho gerado. O mais forte (com melhor fitness) sobrevive.
+
+### Modelo em batch ou de geração
+São gerados K filhos a partir de mutação de K pais selecionados aleatóriamente, e para cada filho é realizado um novo sorteio em toda a população para competir com o filho gerado. O mais forte (com melhor fitness) sobrevive.
+
+### Primeiro algoritmo de programação evolutiva
+É gerado um filho pra cada individuo da população por mutação (tamanho m), e então é combinado pais e filhos para gerar uma nova população de tamanho 2m, e então são mantidos apenas os individuos com m melhores fitness.
+A convergência desse algoritmo é mais rápida devido ao elitismo (manter os melhores), porem tende a ficar presos em mínimos locais.
+
+
+### Algoritmo Genético
+Cada individuo é representado por um cromossomo composto por genes. A reprodução é feita com dois pais a partir do crossover dos seus genes (combinação dos genes dos pais).
+A principio são sorteados dos pais de maneira aleatória e então são gerados dois novos filhos usando crossover e com uma pequena change de mutação. Apenas os filhos são mantidos na próxima geração
+
+São adicionados três princípios para a seleção dos pais:
+* Roulette - Probabilidade de sorteio de cada individuo é proporcional ao seu fitness (lembra uma roleta sendo o fitness o tamanho da area).
+* Ranking - Probabilidade de sorteio de cada individuo cresce uniformemente de acordo com o raking do fitness (cresce uniformemente de acordo com a ordem crescente de fitness).
+* Tournament - É realizada um 'torneio' entre K elementos, e são selecionados os dois com melhor fitness.
+
+
+Também é possivel adicionar o elistimo ao algoritmo genético, passando os k melhores individuos para próxima geração.
+
+
+## Avaliação de Experimentos
+Objetivo é minimizar o erro para exemplos nunca vistos, garantindo assim a melhor generalização.
+
+ * **Hold-out** faz uma partição dos exemplos em um conjunto de treinamento (geralmente 1/2 ou 2/3 dos dados) e teste (restante). É importante que os dados sejam equilibrados em termos de classes.
+ * **Random Subsampling** é o sorteio aleatório dos exemplos no conjunto de treinamento, e o restante para o conjunto de teste. Dtrain inter Dtest = vazio
+ * **K-fold Cross Validation** os dados são organizados em K subconjuntos de tamanhos iguais, um dos conjuntos é utilizado para teste e os demais para treinamento, até que os K subconjuntos tenham sido testados. Pode ser necessário **estratificar** os exemplos, isto é, garantir que haja uma proporção igual de classes em cada subconjunto. o valor de **K = 10** é um bom aproximador pro **leave-one-out**.
+ * **Leave-one-out** é a utilização do *K-fold Cross Validation* com **k=n**, sendo n o número total de exemplos. Esse método produz estimativas de erros mais precisas, pois a média das estimativas tende a taxa de erro verdadeiro conforme K aumenta. Por ser computacionalmente caro, é comumente utilizado em conjuto de dados pequenos
+ * **Bootstrap** é comumente utilizado em conjunto de dados pequenos, criando amostras aleatórias com substituição com tamanho no máximo igual ao de exemplos e os exemplos que não aparecem no conjunto de dados são utilzados para teste. O resultado final é a média de b experimentos.
+
+ Para problemas binários é possivel utilizar a matriz de confusão.
+ Possiveis medidas para matriz de confusão:
+ 	Recal
+ 	Precisão
+ 	Sensibilidade
+ 	Especificidade
+ 	Acurácia
+ 	Medida F
+ 	Medida F1
+
+
+Gráficos Receiver Of Characteristcs (ROC)
+Gráfico de TVP x TFP, onde são postados os classificadores, e é traçado uma reta de (0,0) até (1,1) que representa o classificador aleatório. Os melhores classificadores são os que mais se distanciam dessa reta. O ponto (0, 1) contém o melhor classificador, enquanto que (1, 0) contém o pior classificador.
+
+TVP = VP/(VP+FN) ou revocação
+
+TFP = FP/(FP+VN) representa alarmes falsos
+
+
+
+
+
+
+
+
+
+
+
